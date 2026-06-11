@@ -28,7 +28,17 @@
   .warn { color: #b35900; }
   .progress-bar { background: #e5e7eb; border-radius: 6px; height: 8px; margin-top: 0.5rem; overflow: hidden; }
   .progress-fill { background: #2563eb; height: 100%; }
-  h2 { font-size: 1.05rem; margin: 1.5rem 0 0.75rem; }
+  .lead { font-size: 0.85rem; color: #555; margin: 0.5rem 0 0.5rem; }
+  h2 {
+    font-size: 1.05rem; margin: 1.6rem 0 0.75rem; padding-bottom: 0.3rem;
+    border-bottom: 2px solid #e5e7eb;
+  }
+  .cat-count { font-size: 0.75rem; font-weight: 400; color: #999; float: right; }
+  .variants { margin-top: 0.4rem; }
+  .variants summary { font-size: 0.78rem; color: #2563eb; cursor: pointer; }
+  .variants ul { margin: 0.4rem 0 0; padding-left: 1.1rem; }
+  .variants li { font-size: 0.78rem; margin: 0.15rem 0; }
+  .variants a { color: #555; font-weight: 400; }
   .opp-card {
     background: #fff; border-radius: 10px; padding: 0.9rem 1rem; margin-bottom: 0.6rem;
     box-shadow: 0 1px 3px rgba(0,0,0,0.08);
@@ -44,12 +54,42 @@
   .badge.mid { background: #fef9c3; color: #854d0e; }
   .badge.low { background: #f3f4f6; color: #6b7280; }
   .note { font-size: 0.85rem; color: #888; }
+  .chips {
+    display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.25rem 0 0.5rem;
+    position: sticky; top: 0; background: #f4f5f7; padding: 0.4rem 0; z-index: 5;
+  }
+  .chip {
+    border: 1px solid #d1d5db; background: #fff; color: #374151;
+    border-radius: 999px; padding: 0.3rem 0.7rem; font-size: 0.78rem;
+    cursor: pointer; -webkit-appearance: none;
+  }
+  .chip.active { background: #2563eb; border-color: #2563eb; color: #fff; }
+  .chartwrap {
+    margin: 0 0 0.8rem; background: #fff; border-radius: 10px; padding: 0.6rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  }
+  .chart { width: 100%; height: auto; display: block; }
+  .chart .grid { stroke: #eceef1; stroke-width: 1; }
+  .chart .yl { fill: #9ca3af; font-size: 10px; text-anchor: end; }
+  .chart .xl { fill: #9ca3af; font-size: 10px; text-anchor: middle; }
+  .legend { display: flex; flex-wrap: wrap; gap: 0.3rem 0.8rem; margin-top: 0.4rem; }
+  .legend .lg { font-size: 0.72rem; color: #555; display: inline-flex; align-items: center; }
+  .legend .lg i {
+    width: 0.6rem; height: 0.6rem; border-radius: 2px; margin-right: 0.3rem;
+    display: inline-block;
+  }
+  .legend .lg b { margin-left: 0.25rem; color: #1a1a1a; }
+  .legend .more { color: #9ca3af; }
+  .chart-empty {
+    background: #fff; border-radius: 10px; padding: 0.9rem 1rem; margin: 0 0 0.8rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  }
   footer { margin-top: 2rem; font-size: 0.75rem; color: #999; text-align: center; }
 </style>
 </head>
 <body>
   <h1>Takealot Research Dashboard</h1>
-  <div class="meta">Generated 2026-06-11 09:26</div>
+  <div class="meta">Generated 2026-06-11 10:31</div>
 
   <div class="status-grid">
     <div class="card">
@@ -58,7 +98,7 @@
     </div>
     <div class="card">
       <div class="label">Next Refresh</div>
-      <div class="value">in 20h 33m</div>
+      <div class="value">in 19h 28m</div>
     </div>
     <div class="card">
       <div class="label">Tracking Progress</div>
@@ -68,132 +108,530 @@
     </div>
   </div>
 
-  <h2>Top Opportunities (140 scored)</h2>
+  <div class="lead">Opportunities by category &middot; 65 distinct product(s)
+    from 140 tracked listings</div>
+  <div class="chips"><button class="chip active" data-filter="all">All</button><button class="chip" data-filter="pet-grooming-accessories">Pet Grooming &amp; Accessories</button><button class="chip" data-filter="kitchen-gadgets">Kitchen Gadgets</button><button class="chip" data-filter="car-accessories-organisers">Car Accessories &amp; Organisers</button><button class="chip" data-filter="load-shedding-backup-power">Load Shedding / Backup Power</button><button class="chip" data-filter="led-ambient-lighting">LED &amp; Ambient Lighting</button></div>
+  <section class="cat" data-niche="pet-grooming-accessories">
+  <h2>Pet Grooming &amp; Accessories <span class="cat-count">13 product(s)</span></h2>
+<p class="note chart-empty">Trend lines appear once there are 2+ daily snapshots on different days — collecting now.</p>
     <div class="opp-card">
       <span class="badge low">0.0</span>
-      <a href="https://www.takealot.com/x/PLID90380498" target="_blank" rel="noopener">Modern Rechargeable LED Portable Cordless Table Lamp</a>
-      <div class="opp-meta">R278 &middot; 1 seller(s) &middot; rating 4.2 &middot; Out of stock</div>
+      <a href="https://www.takealot.com/x/PLID102245103" target="_blank" rel="noopener">3-in-1 Pet Deshedding Tool</a>
+      <div class="opp-meta">R69-289 &middot; <b>12 listings</b> (same product) &middot; rating 5.0 &middot; In stock</div>
       <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
+      <details class="variants"><summary>see 12 look-alike listings</summary>
+        <ul>
+        <li><a href="https://www.takealot.com/x/PLID100780886" target="_blank" rel="noopener">3-in-1 Self-Cleaning Steam Pet Grooming Brush for Cats and Dogs Grooming</a></li>
+        <li><a href="https://www.takealot.com/x/PLID94129690" target="_blank" rel="noopener">Pet Grooming Brush Deshedding Tool for Dogs &amp; Cats Short Medium Long Hair</a></li>
+        <li><a href="https://www.takealot.com/x/PLID97588209" target="_blank" rel="noopener">TopikaPet - Dog Slicker Brush for Grooming, Pet Dematting &amp; Deshedding Tool</a></li>
+        <li><a href="https://www.takealot.com/x/PLID90629973" target="_blank" rel="noopener">Pet Grooming Tool Self Cleaning Slicker Brush For Dogs And Cats in Grey</a></li>
+        <li><a href="https://www.takealot.com/x/PLID98577969" target="_blank" rel="noopener">Self- Cleaning Slicker Hair Brush For Dogs And Cats</a></li>
+        <li><a href="https://www.takealot.com/x/PLID95874301" target="_blank" rel="noopener">3 In 1 Steamy Pet Grooming Brush</a></li>
+        <li><a href="https://www.takealot.com/x/PLID53189847" target="_blank" rel="noopener">Pet Grooming Shedding Brush</a></li>
+        <li><a href="https://www.takealot.com/x/PLID100930674" target="_blank" rel="noopener">Premium Pet Dematting &amp; Deshedding Tool for Dogs &amp; Cats</a></li>
+        <li><a href="https://www.takealot.com/x/PLID100061513" target="_blank" rel="noopener">Deshedding Tool and Grooming Brush for Dogs and Cats,with Short to LongHair</a></li>
+        <li><a href="https://www.takealot.com/x/PLID46866576" target="_blank" rel="noopener">Pet Deshedding Tool &amp; Grooming Brush</a></li>
+        <li><a href="https://www.takealot.com/x/PLID73717320" target="_blank" rel="noopener">Dematting Comb &amp; Grooming Tool for Cats &amp; Dogs</a></li>
+        <li><a href="https://www.takealot.com/x/PLID102245103" target="_blank" rel="noopener">3-in-1 Pet Deshedding Tool</a></li>
+        </ul></details>
     </div>
     <div class="opp-card">
       <span class="badge low">0.0</span>
-      <a href="https://www.takealot.com/x/PLID95504868" target="_blank" rel="noopener">Rechargeable 3-color LED Metal Table Lamp Lasting Up to 12 hours</a>
-      <div class="opp-meta">R209 &middot; 1 seller(s) &middot; rating 4.7 &middot; Out of stock</div>
+      <a href="https://www.takealot.com/x/PLID94008384" target="_blank" rel="noopener">Smart Water Pet Fountain</a>
+      <div class="opp-meta">R132-380 &middot; <b>7 listings</b> (same product) &middot; rating 4.7 &middot; In stock</div>
       <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
-    </div>
-    <div class="opp-card">
-      <span class="badge low">0.0</span>
-      <a href="https://www.takealot.com/x/PLID101462224" target="_blank" rel="noopener">Touch-Sensitive Ambient Light Remote Control Rechargeable Night Light</a>
-      <div class="opp-meta">R288 &middot; 2 seller(s) &middot; rating 0.0 &middot; Out of stock</div>
-      <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
-    </div>
-    <div class="opp-card">
-      <span class="badge low">0.0</span>
-      <a href="https://www.takealot.com/x/PLID98054850" target="_blank" rel="noopener">Gold Modern Cordless LED Table Lamp - Rechargeable 2000mAh Portable Light</a>
-      <div class="opp-meta">R197 &middot; 1 seller(s) &middot; rating 4.4 &middot; Out of stock</div>
-      <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
-    </div>
-    <div class="opp-card">
-      <span class="badge low">0.0</span>
-      <a href="https://www.takealot.com/x/PLID97490989" target="_blank" rel="noopener">LED Lying Flat Duck Night Light, 3 Level Dimmable Nursery Nightlight</a>
-      <div class="opp-meta">R137 &middot; 2 seller(s) &middot; rating 4.4 &middot; Out of stock</div>
-      <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
-    </div>
-    <div class="opp-card">
-      <span class="badge low">0.0</span>
-      <a href="https://www.takealot.com/x/PLID99387519" target="_blank" rel="noopener">Gold Skirt Cordless LED Table Lamp - Rechargeable 2000mAh Portable Light</a>
-      <div class="opp-meta">R350 &middot; 1 seller(s) &middot; rating 4.0 &middot; Out of stock</div>
-      <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
-    </div>
-    <div class="opp-card">
-      <span class="badge low">0.0</span>
-      <a href="https://www.takealot.com/x/PLID99939472" target="_blank" rel="noopener">Rechargeable LED Table Lamp touch dimming</a>
-      <div class="opp-meta">R207 &middot; 1 seller(s) &middot; rating 4.6 &middot; Out of stock</div>
-      <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
-    </div>
-    <div class="opp-card">
-      <span class="badge low">0.0</span>
-      <a href="https://www.takealot.com/x/PLID99809895" target="_blank" rel="noopener">Rechargeable LED Table Lamp Metal Desk Lamp With Touch - Black</a>
-      <div class="opp-meta">R259 &middot; 1 seller(s) &middot; rating 3.5 &middot; In stock</div>
-      <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
-    </div>
-    <div class="opp-card">
-      <span class="badge low">0.0</span>
-      <a href="https://www.takealot.com/x/PLID95575966" target="_blank" rel="noopener">Dimmable Rechargeable Touch LED Table Lamp for Restaurants/Homes</a>
-      <div class="opp-meta">R397 &middot; 1 seller(s) &middot; rating 2.5 &middot; Out of stock</div>
-      <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
-    </div>
-    <div class="opp-card">
-      <span class="badge low">0.0</span>
-      <a href="https://www.takealot.com/x/PLID97002537" target="_blank" rel="noopener">Rechargeable LED Night Light: Creative Desk Lamp for Bedroom &amp; Decoration</a>
-      <div class="opp-meta">R199 &middot; 1 seller(s) &middot; rating 0.0 &middot; Out of stock</div>
-      <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
-    </div>
-    <div class="opp-card">
-      <span class="badge low">0.0</span>
-      <a href="https://www.takealot.com/x/PLID100780886" target="_blank" rel="noopener">3-in-1 Self-Cleaning Steam Pet Grooming Brush for Cats and Dogs Grooming</a>
-      <div class="opp-meta">R289 &middot; 1 seller(s) &middot; rating 5.0 &middot; In stock</div>
-      <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
-    </div>
-    <div class="opp-card">
-      <span class="badge low">0.0</span>
-      <a href="https://www.takealot.com/x/PLID91192609" target="_blank" rel="noopener">2 in 1 Undercoat Rake Pet Deshedding Brush for Mats &amp; Tangles Removing</a>
-      <div class="opp-meta">R155 &middot; 1 seller(s) &middot; rating 4.8 &middot; Out of stock</div>
-      <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
+      <details class="variants"><summary>see 7 look-alike listings</summary>
+        <ul>
+        <li><a href="https://www.takealot.com/x/PLID90005837" target="_blank" rel="noopener">2.5L Automatic Pet Water Fountain</a></li>
+        <li><a href="https://www.takealot.com/x/PLID94008384" target="_blank" rel="noopener">Smart Water Pet Fountain</a></li>
+        <li><a href="https://www.takealot.com/x/PLID97486389" target="_blank" rel="noopener">2L Automatic Cat Water Fountain with LED Light Quiet Pet Water Dispenser</a></li>
+        <li><a href="https://www.takealot.com/x/PLID90629433" target="_blank" rel="noopener">2.5L Dog &amp; Cat Automatic Pet Water Fountain-White</a></li>
+        <li><a href="https://www.takealot.com/x/PLID93933017" target="_blank" rel="noopener">Pet Water Fountain Stainless Steel 2.4L Quiet Pump LED Light for Cats Dogs</a></li>
+        <li><a href="https://www.takealot.com/x/PLID73885694" target="_blank" rel="noopener">Portable Pet Dog And Cat Automatic Water Fountain</a></li>
+        <li><a href="https://www.takealot.com/x/PLID96147454" target="_blank" rel="noopener">3.2L Auto Cat Water Fountain Stainless Steel Bowl Quiet Pump Easy Clean</a></li>
+        </ul></details>
     </div>
     <div class="opp-card">
       <span class="badge low">0.0</span>
       <a href="https://www.takealot.com/x/PLID92978279" target="_blank" rel="noopener">Pet Dematting Comb 2 Sided Undercoat Rake for Cats &amp; Dogs</a>
-      <div class="opp-meta">R100 &middot; 1 seller(s) &middot; rating 4.6 &middot; Out of stock</div>
+      <div class="opp-meta">R100-299 &middot; <b>2 listings</b> (same product) &middot; rating 4.6 &middot; In stock</div>
       <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
+      <details class="variants"><summary>see 2 look-alike listings</summary>
+        <ul>
+        <li><a href="https://www.takealot.com/x/PLID92978279" target="_blank" rel="noopener">Pet Dematting Comb 2 Sided Undercoat Rake for Cats &amp; Dogs</a></li>
+        <li><a href="https://www.takealot.com/x/PLID94030078" target="_blank" rel="noopener">Pet Grooming Brush XXL Double Sided, Dematting Rake Comb for Dogs &amp; Cats</a></li>
+        </ul></details>
     </div>
     <div class="opp-card">
       <span class="badge low">0.0</span>
-      <a href="https://www.takealot.com/x/PLID94129690" target="_blank" rel="noopener">Pet Grooming Brush Deshedding Tool for Dogs &amp; Cats Short Medium Long Hair</a>
-      <div class="opp-meta">R99 &middot; 2 seller(s) &middot; rating 4.7 &middot; In stock</div>
+      <a href="https://www.takealot.com/x/PLID90870573" target="_blank" rel="noopener">WigWagga - Pet Cat Dog Deshedding Grooming Brush Comb - 10cm Width</a>
+      <div class="opp-meta">R149-229 &middot; <b>2 listings</b> (same product) &middot; rating 4.7 &middot; In stock</div>
       <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
+      <details class="variants"><summary>see 2 look-alike listings</summary>
+        <ul>
+        <li><a href="https://www.takealot.com/x/PLID94089256" target="_blank" rel="noopener">Pet Grooming Brush and Metal Comb for Dog Cat De-matting De-shedding</a></li>
+        <li><a href="https://www.takealot.com/x/PLID90870573" target="_blank" rel="noopener">WigWagga - Pet Cat Dog Deshedding Grooming Brush Comb - 10cm Width</a></li>
+        </ul></details>
     </div>
     <div class="opp-card">
       <span class="badge low">0.0</span>
-      <a href="https://www.takealot.com/x/PLID94030078" target="_blank" rel="noopener">Pet Grooming Brush XXL Double Sided, Dematting Rake Comb for Dogs &amp; Cats</a>
-      <div class="opp-meta">R299 &middot; 1 seller(s) &middot; rating 4.5 &middot; In stock</div>
-      <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
-    </div>
-    <div class="opp-card">
-      <span class="badge low">0.0</span>
-      <a href="https://www.takealot.com/x/PLID97588209" target="_blank" rel="noopener">TopikaPet - Dog Slicker Brush for Grooming, Pet Dematting &amp; Deshedding Tool</a>
-      <div class="opp-meta">R99 &middot; 1 seller(s) &middot; rating 4.0 &middot; Out of stock</div>
+      <a href="https://www.takealot.com/x/PLID91192609" target="_blank" rel="noopener">2 in 1 Undercoat Rake Pet Deshedding Brush for Mats &amp; Tangles Removing</a>
+      <div class="opp-meta">R155 &middot; 1 listing &middot; rating 4.8 &middot; Out of stock</div>
       <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
     </div>
     <div class="opp-card">
       <span class="badge low">0.0</span>
       <a href="https://www.takealot.com/x/PLID71779221" target="_blank" rel="noopener">Pet Shower Head, Bathing Massage Brush Shower Head Grooming Tool for Dogs</a>
-      <div class="opp-meta">R136 &middot; 2 seller(s) &middot; rating 4.3 &middot; Out of stock</div>
+      <div class="opp-meta">R136 &middot; 1 listing &middot; rating 4.3 &middot; Out of stock</div>
       <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
     </div>
     <div class="opp-card">
       <span class="badge low">0.0</span>
-      <a href="https://www.takealot.com/x/PLID90629973" target="_blank" rel="noopener">Pet Grooming Tool Self Cleaning Slicker Brush For Dogs And Cats in Grey</a>
-      <div class="opp-meta">R69 &middot; 1 seller(s) &middot; rating 4.6 &middot; In stock</div>
+      <a href="https://www.takealot.com/x/PLID100968461" target="_blank" rel="noopener">Dog deShedding tool - Large long-haired dog</a>
+      <div class="opp-meta">R267 &middot; 1 listing &middot; rating 0.0 &middot; In stock</div>
       <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
     </div>
     <div class="opp-card">
       <span class="badge low">0.0</span>
-      <a href="https://www.takealot.com/x/PLID98577969" target="_blank" rel="noopener">Self- Cleaning Slicker Hair Brush For Dogs And Cats</a>
-      <div class="opp-meta">R145 &middot; 1 seller(s) &middot; rating 3.9 &middot; Out of stock</div>
+      <a href="https://www.takealot.com/x/PLID90005848" target="_blank" rel="noopener">Nunbell Grooming / De-Shedding / Bathing Glove For Cats and Dogs</a>
+      <div class="opp-meta">R99 &middot; 1 listing &middot; rating 4.4 &middot; Out of stock</div>
       <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
     </div>
     <div class="opp-card">
       <span class="badge low">0.0</span>
-      <a href="https://www.takealot.com/x/PLID95874301" target="_blank" rel="noopener">3 In 1 Steamy Pet Grooming Brush</a>
-      <div class="opp-meta">R75 &middot; 1 seller(s) &middot; rating 5.0 &middot; Out of stock</div>
+      <a href="https://www.takealot.com/x/PLID96433496" target="_blank" rel="noopener">Premium Paws - Stainless Steel Pet Drinking Fountain with Filter</a>
+      <div class="opp-meta">R398 &middot; 1 listing &middot; rating 4.9 &middot; In stock</div>
       <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
     </div>
-<p class="note">+ 120 more scored product(s) not shown.</p>
+    <div class="opp-card">
+      <span class="badge low">0.0</span>
+      <a href="https://www.takealot.com/x/PLID99514751" target="_blank" rel="noopener">Tali Pet Filtered Water Fountain 3.2L, 304 Stainless Steel Quiet Automatic</a>
+      <div class="opp-meta">R459 &middot; 1 listing &middot; rating 4.8 &middot; In stock</div>
+      <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
+    </div>
+    <div class="opp-card">
+      <span class="badge low">0.0</span>
+      <a href="https://www.takealot.com/x/PLID94493222" target="_blank" rel="noopener">1.8L USB-Powered Automatic Pet Water Dispenser with Faucet</a>
+      <div class="opp-meta">R139 &middot; 1 listing &middot; rating 3.9 &middot; In stock</div>
+      <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
+    </div>
+    <div class="opp-card">
+      <span class="badge low">0.0</span>
+      <a href="https://www.takealot.com/x/PLID72768629" target="_blank" rel="noopener">Aurora Emergency LED Light Bulb B22 | Rechargeable Load Shedding Backup</a>
+      <div class="opp-meta">R129 &middot; 1 listing &middot; rating 4.6 &middot; In stock</div>
+      <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
+    </div>
+<p class="note">+ 1 more product(s) in this category (lower score).</p>
+  </section>
+  <section class="cat" data-niche="kitchen-gadgets">
+  <h2>Kitchen Gadgets <span class="cat-count">21 product(s)</span></h2>
+<p class="note chart-empty">Trend lines appear once there are 2+ daily snapshots on different days — collecting now.</p>
+    <div class="opp-card">
+      <span class="badge low">0.0</span>
+      <a href="https://www.takealot.com/x/PLID93964248" target="_blank" rel="noopener">Square Silicone Air Fryer Liner - 4 Pack</a>
+      <div class="opp-meta">R59-139 &middot; <b>6 listings</b> (same product) &middot; rating 4.7 &middot; In stock</div>
+      <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
+      <details class="variants"><summary>see 6 look-alike listings</summary>
+        <ul>
+        <li><a href="https://www.takealot.com/x/PLID92511391" target="_blank" rel="noopener">Square Silicone Air Fryer Liner 20cm - 2 Pack</a></li>
+        <li><a href="https://www.takealot.com/x/PLID95179091" target="_blank" rel="noopener">2-Pack Square Silicone Air Fryer Liner - Reusable Air Fryer Basket</a></li>
+        <li><a href="https://www.takealot.com/x/PLID93964248" target="_blank" rel="noopener">Square Silicone Air Fryer Liner - 4 Pack</a></li>
+        <li><a href="https://www.takealot.com/x/PLID95276965" target="_blank" rel="noopener">Prestige 50pcs Rectangular Air Fryer Paper Liners 22x14x4.5</a></li>
+        <li><a href="https://www.takealot.com/x/PLID95278659" target="_blank" rel="noopener">Prestige 50pcs Square Air Fryer Paper Liners</a></li>
+        <li><a href="https://www.takealot.com/x/PLID95184003" target="_blank" rel="noopener">Square Silicone Air Fryer Liner Reusable Air Fryer Basket - 2 Pack</a></li>
+        </ul></details>
+    </div>
+    <div class="opp-card">
+      <span class="badge low">0.0</span>
+      <a href="https://www.takealot.com/x/PLID53821942" target="_blank" rel="noopener">Portable Smoothie Blender, Juicer Food Processor USB Rechargeable</a>
+      <div class="opp-meta">R132-278 &middot; <b>3 listings</b> (same product) &middot; rating 4.2 &middot; Out of stock</div>
+      <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
+      <details class="variants"><summary>see 3 look-alike listings</summary>
+        <ul>
+        <li><a href="https://www.takealot.com/x/PLID53821942" target="_blank" rel="noopener">Portable Smoothie Blender, Juicer Food Processor USB Rechargeable</a></li>
+        <li><a href="https://www.takealot.com/x/PLID53331302" target="_blank" rel="noopener">USB Rechargeable Mini Portable Electric Fruit Juicer Blender Smoothie Maker</a></li>
+        <li><a href="https://www.takealot.com/x/PLID98559831" target="_blank" rel="noopener">Portable Smoothie Blender Juicer Food Processor Suitable for fitness sports</a></li>
+        </ul></details>
+    </div>
+    <div class="opp-card">
+      <span class="badge low">0.0</span>
+      <a href="https://www.takealot.com/x/PLID73504187" target="_blank" rel="noopener">12 Pieces Non-Stick Silicon &amp; Wooden Handle Kitchen Utensil Set</a>
+      <div class="opp-meta">R176-219 &middot; <b>2 listings</b> (same product) &middot; rating 4.5 &middot; In stock</div>
+      <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
+      <details class="variants"><summary>see 2 look-alike listings</summary>
+        <ul>
+        <li><a href="https://www.takealot.com/x/PLID73504187" target="_blank" rel="noopener">12 Pieces Non-Stick Silicon &amp; Wooden Handle Kitchen Utensil Set</a></li>
+        <li><a href="https://www.takealot.com/x/PLID99153673" target="_blank" rel="noopener">Topika - Silicone Kitchen Utensils Set 12-piece Non-Stick, Wooden Handles</a></li>
+        </ul></details>
+    </div>
+    <div class="opp-card">
+      <span class="badge low">0.0</span>
+      <a href="https://www.takealot.com/x/PLID47237445" target="_blank" rel="noopener">Silicone Heat Resistant Spatulas - 4 Piece</a>
+      <div class="opp-meta">R215-240 &middot; <b>2 listings</b> (same product) &middot; rating 4.6 &middot; In stock</div>
+      <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
+      <details class="variants"><summary>see 2 look-alike listings</summary>
+        <ul>
+        <li><a href="https://www.takealot.com/x/PLID47237445" target="_blank" rel="noopener">Silicone Heat Resistant Spatulas - 4 Piece</a></li>
+        <li><a href="https://www.takealot.com/x/PLID98732512" target="_blank" rel="noopener">19 Piece Heat Resistant Silicone Cookware Set</a></li>
+        </ul></details>
+    </div>
+    <div class="opp-card">
+      <span class="badge low">0.0</span>
+      <a href="https://www.takealot.com/x/PLID95277052" target="_blank" rel="noopener">Prestige 7 Cup Silicone Airfryer Muffin Pan</a>
+      <div class="opp-meta">R59 &middot; 1 listing &middot; rating 4.3 &middot; Out of stock</div>
+      <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
+    </div>
+    <div class="opp-card">
+      <span class="badge low">0.0</span>
+      <a href="https://www.takealot.com/x/PLID91723432" target="_blank" rel="noopener">100pc Non-Stick Air Fryer Parchement Paper</a>
+      <div class="opp-meta">R96 &middot; 1 listing &middot; rating 4.3 &middot; Out of stock</div>
+      <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
+    </div>
+    <div class="opp-card">
+      <span class="badge low">0.0</span>
+      <a href="https://www.takealot.com/x/PLID71289434" target="_blank" rel="noopener">Taurus Air Fryer Accessory Set 28 Piece</a>
+      <div class="opp-meta">R555 &middot; 1 listing &middot; rating 4.3 &middot; In stock</div>
+      <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
+    </div>
+    <div class="opp-card">
+      <span class="badge low">0.0</span>
+      <a href="https://www.takealot.com/x/PLID99830006" target="_blank" rel="noopener">Air Fryer Accessories Grilling Baking set cake mold baking tools - 10 Piece</a>
+      <div class="opp-meta">R269 &middot; 1 listing &middot; rating 3.7 &middot; In stock</div>
+      <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
+    </div>
+    <div class="opp-card">
+      <span class="badge low">0.0</span>
+      <a href="https://www.takealot.com/x/PLID96627194" target="_blank" rel="noopener">Portable Blender 20 Oz Mini Personal Size Blender for Shakes and Smoothies</a>
+      <div class="opp-meta">R208 &middot; 1 listing &middot; rating 3.8 &middot; In stock</div>
+      <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
+    </div>
+    <div class="opp-card">
+      <span class="badge low">0.0</span>
+      <a href="https://www.takealot.com/x/PLID99591407" target="_blank" rel="noopener">Elektra Rechargeable Plastic Blender - Black (400ml)</a>
+      <div class="opp-meta">R429 &middot; 1 listing &middot; rating 5.0 &middot; In stock</div>
+      <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
+    </div>
+    <div class="opp-card">
+      <span class="badge low">0.0</span>
+      <a href="https://www.takealot.com/x/PLID92728819" target="_blank" rel="noopener">Deal 420ml Portable Mini Juice Blender</a>
+      <div class="opp-meta">R185 &middot; 1 listing &middot; rating 2.0 &middot; Out of stock</div>
+      <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
+    </div>
+    <div class="opp-card">
+      <span class="badge low">0.0</span>
+      <a href="https://www.takealot.com/x/PLID94973653" target="_blank" rel="noopener">Nutribullet Portable Blender</a>
+      <div class="opp-meta">R1298 &middot; 1 listing &middot; rating 4.2 &middot; Out of stock</div>
+      <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
+    </div>
+<p class="note">+ 9 more product(s) in this category (lower score).</p>
+  </section>
+  <section class="cat" data-niche="car-accessories-organisers">
+  <h2>Car Accessories &amp; Organisers <span class="cat-count">10 product(s)</span></h2>
+<p class="note chart-empty">Trend lines appear once there are 2+ daily snapshots on different days — collecting now.</p>
+    <div class="opp-card">
+      <span class="badge low">0.0</span>
+      <a href="https://www.takealot.com/x/PLID95892920" target="_blank" rel="noopener">Suction Cup &amp; Vent Mount Car Phone Holder</a>
+      <div class="opp-meta">R109-344 &middot; <b>8 listings</b> (same product) &middot; rating 4.8 &middot; In stock</div>
+      <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
+      <details class="variants"><summary>see 8 look-alike listings</summary>
+        <ul>
+        <li><a href="https://www.takealot.com/x/PLID95722960" target="_blank" rel="noopener">Car Phone Holder 360 Rotation with Suction Cup for Windshield Dashboard</a></li>
+        <li><a href="https://www.takealot.com/x/PLID54860652" target="_blank" rel="noopener">Volkano Hold Series Magnetic Car Phone Holder - Adjustable Air Vent Mount</a></li>
+        <li><a href="https://www.takealot.com/x/PLID95774382" target="_blank" rel="noopener">Car Phone Holder Automatic Lock with Suction Cup for Windshield Dashboard</a></li>
+        <li><a href="https://www.takealot.com/x/PLID95276755" target="_blank" rel="noopener">AICOM - Cell Phone Mount Holder for Car Air Vent</a></li>
+        <li><a href="https://www.takealot.com/x/PLID92611866" target="_blank" rel="noopener">PEACHZ Car Phone Mount Air Vent Holder - Universal Smartphone Car Mount</a></li>
+        <li><a href="https://www.takealot.com/x/PLID54860647" target="_blank" rel="noopener">Volkano Extend Series Car Phone Holder - Adjustable Secure Mount, Black</a></li>
+        <li><a href="https://www.takealot.com/x/PLID95892920" target="_blank" rel="noopener">Suction Cup &amp; Vent Mount Car Phone Holder</a></li>
+        <li><a href="https://www.takealot.com/x/PLID54860651" target="_blank" rel="noopener">Volkano Magnetic Car Phone Holder - Flexible &amp; Secure-Suction Mount</a></li>
+        </ul></details>
+    </div>
+    <div class="opp-card">
+      <span class="badge low">0.0</span>
+      <a href="https://www.takealot.com/x/PLID96477617" target="_blank" rel="noopener">Collapsible Trunk Organizer for Car Foldable 3-Grids Box with Handles</a>
+      <div class="opp-meta">R109-399 &middot; <b>8 listings</b> (same product) &middot; rating 5.0 &middot; In stock</div>
+      <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
+      <details class="variants"><summary>see 8 look-alike listings</summary>
+        <ul>
+        <li><a href="https://www.takealot.com/x/PLID98308469" target="_blank" rel="noopener">Car Boot Foldable Storage Trunk Organizer Collapsible Multi Compartment 66L</a></li>
+        <li><a href="https://www.takealot.com/x/PLID97006595" target="_blank" rel="noopener">66L Car Boot Organiser Foldable Storage Box with Compartments for Groceries</a></li>
+        <li><a href="https://www.takealot.com/x/PLID98008276" target="_blank" rel="noopener">TopikaAuto - 55L Car Boot Organiser Foldable Storage Trunk Organizer-Black</a></li>
+        <li><a href="https://www.takealot.com/x/PLID99139244" target="_blank" rel="noopener">TopikaAuto - 100L Car Trunk Storage Organiser, Foldable Car Boot Organiser</a></li>
+        <li><a href="https://www.takealot.com/x/PLID98307939" target="_blank" rel="noopener">Car Trunk Organizer:Collapsible,Waterproof,Multifunctional Car Boot Storage</a></li>
+        <li><a href="https://www.takealot.com/x/PLID96477617" target="_blank" rel="noopener">Collapsible Trunk Organizer for Car Foldable 3-Grids Box with Handles</a></li>
+        <li><a href="https://www.takealot.com/x/PLID100375415" target="_blank" rel="noopener">68L Car Boot Organizer Foldable Car Trunk Storage Box Oxford with Strap</a></li>
+        <li><a href="https://www.takealot.com/x/PLID98300964" target="_blank" rel="noopener">TopikaAuto - 1680D Car Boot Trunk Organizer with Lid &amp; Shoe Storage Box</a></li>
+        </ul></details>
+    </div>
+    <div class="opp-card">
+      <span class="badge low">0.0</span>
+      <a href="https://www.takealot.com/x/PLID71934921" target="_blank" rel="noopener">Portable High Power Car Vacuum Cleaner</a>
+      <div class="opp-meta">R124-500 &middot; <b>7 listings</b> (same product) &middot; rating 4.9 &middot; In stock</div>
+      <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
+      <details class="variants"><summary>see 7 look-alike listings</summary>
+        <ul>
+        <li><a href="https://www.takealot.com/x/PLID99467089" target="_blank" rel="noopener">Topika Car Vacuum Cleaner Cordless, 16000Pa Suction, 2-in-1 Blower Function</a></li>
+        <li><a href="https://www.takealot.com/x/PLID96145085" target="_blank" rel="noopener">Powerful Suction Cordless Handheld Car Vacuum Cleaner</a></li>
+        <li><a href="https://www.takealot.com/x/PLID96011481" target="_blank" rel="noopener">Cordless Car Vacuum Cleaner + 3 IN 1 glass cleaner mini</a></li>
+        <li><a href="https://www.takealot.com/x/PLID71934921" target="_blank" rel="noopener">Portable High Power Car Vacuum Cleaner</a></li>
+        <li><a href="https://www.takealot.com/x/PLID98578500" target="_blank" rel="noopener">Handheld Car Vacuum Cleaner, Portable Cordless 4 in 1 Vacuum Cleaner</a></li>
+        <li><a href="https://www.takealot.com/x/PLID98046240" target="_blank" rel="noopener">Portable Handheld Car Vacuum Cleaner + 1 Mini brush</a></li>
+        <li><a href="https://www.takealot.com/x/PLID101463483" target="_blank" rel="noopener">REDISSON Car Vacuum, Portable Car Vacuum Cleaner High Power 5500Pa</a></li>
+        </ul></details>
+    </div>
+    <div class="opp-card">
+      <span class="badge low">0.0</span>
+      <a href="https://www.takealot.com/x/PLID96304447" target="_blank" rel="noopener">REDISSON Car Phone Mobile Holder For All Car Models Air outlet hook type</a>
+      <div class="opp-meta">R108 &middot; 1 listing &middot; rating 4.2 &middot; In stock</div>
+      <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
+    </div>
+    <div class="opp-card">
+      <span class="badge low">0.0</span>
+      <a href="https://www.takealot.com/x/PLID58969814" target="_blank" rel="noopener">Gravity Car Phone Mount Hands Free One Handed Cell Phone Holder</a>
+      <div class="opp-meta">R109 &middot; 1 listing &middot; rating 4.0 &middot; In stock</div>
+      <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
+    </div>
+    <div class="opp-card">
+      <span class="badge low">0.0</span>
+      <a href="https://www.takealot.com/x/PLID96344711" target="_blank" rel="noopener">Trunk Rear Seat Storage Bag Multi Pockets Car Boot Hanging Organizer</a>
+      <div class="opp-meta">R169 &middot; 1 listing &middot; rating 4.3 &middot; Out of stock</div>
+      <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
+    </div>
+    <div class="opp-card">
+      <span class="badge low">0.0</span>
+      <a href="https://www.takealot.com/x/PLID43825495" target="_blank" rel="noopener">Car Boot Organiser</a>
+      <div class="opp-meta">R96 &middot; 1 listing &middot; rating 4.0 &middot; In stock</div>
+      <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
+    </div>
+    <div class="opp-card">
+      <span class="badge low">0.0</span>
+      <a href="https://www.takealot.com/x/PLID95767728" target="_blank" rel="noopener">Portable Car Vacuum Cleaner Air Duster Blower 2 in1 with Multi-Nozzles</a>
+      <div class="opp-meta">R168 &middot; 1 listing &middot; rating 4.0 &middot; In stock</div>
+      <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
+    </div>
+    <div class="opp-card">
+      <span class="badge low">0.0</span>
+      <a href="https://www.takealot.com/x/PLID97387061" target="_blank" rel="noopener">Rechargeable Wireless Powerful Vacuum Cleaner for Both Home &amp;Car Use</a>
+      <div class="opp-meta">R128 &middot; 1 listing &middot; rating 3.4 &middot; In stock</div>
+      <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
+    </div>
+    <div class="opp-card">
+      <span class="badge low">0.0</span>
+      <a href="https://www.takealot.com/x/PLID69454729" target="_blank" rel="noopener">BLACK+DECKER 7.2V Cordless Dustbuster Hand Vacuum With Accessories</a>
+      <div class="opp-meta">R749 &middot; 1 listing &middot; rating 4.5 &middot; In stock</div>
+      <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
+    </div>
+  </section>
+  <section class="cat" data-niche="load-shedding-backup-power">
+  <h2>Load Shedding / Backup Power <span class="cat-count">8 product(s)</span></h2>
+<p class="note chart-empty">Trend lines appear once there are 2+ daily snapshots on different days — collecting now.</p>
+    <div class="opp-card">
+      <span class="badge low">0.0</span>
+      <a href="https://www.takealot.com/x/PLID73483712" target="_blank" rel="noopener">UPS for WiFi Router</a>
+      <div class="opp-meta">R299-895 &middot; <b>6 listings</b> (same product) &middot; rating 4.5 &middot; In stock</div>
+      <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
+      <details class="variants"><summary>see 6 look-alike listings</summary>
+        <ul>
+        <li><a href="https://www.takealot.com/x/PLID73483712" target="_blank" rel="noopener">UPS for WiFi Router</a></li>
+        <li><a href="https://www.takealot.com/x/PLID101636640" target="_blank" rel="noopener">ElecTrek-15000mAh Mini DC UPS - Multi-Voltage Backup Power for WIFI Routers</a></li>
+        <li><a href="https://www.takealot.com/x/PLID71640434" target="_blank" rel="noopener">Fibre / Wifi  Router Backup Power  / DC Mini UPS  8800mAh</a></li>
+        <li><a href="https://www.takealot.com/x/PLID73655712" target="_blank" rel="noopener">Fiber / WIFI Router Backup Power /DC Mini UPS 8800mAh</a></li>
+        <li><a href="https://www.takealot.com/x/PLID91177800" target="_blank" rel="noopener">Backup Power Supply 5/9/12Vdc Mini DC UPS ideal for WIFI, router and Camera</a></li>
+        <li><a href="https://www.takealot.com/x/PLID101831878" target="_blank" rel="noopener">8800mAh Mini DC UPS Portable Power Supply for WiFi Router</a></li>
+        </ul></details>
+    </div>
+    <div class="opp-card">
+      <span class="badge low">0.0</span>
+      <a href="https://www.takealot.com/x/PLID94061051" target="_blank" rel="noopener">Switched LED 5W Light Bulbs Rechargeable | 3 Pack | Auto Dimmable | B22</a>
+      <div class="opp-meta">R149 &middot; <b>2 listings</b> (same product) &middot; rating 4.4 &middot; In stock</div>
+      <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
+      <details class="variants"><summary>see 2 look-alike listings</summary>
+        <ul>
+        <li><a href="https://www.takealot.com/x/PLID94061051" target="_blank" rel="noopener">Switched LED 5W Light Bulbs Rechargeable | 3 Pack | Auto Dimmable | B22</a></li>
+        <li><a href="https://www.takealot.com/x/PLID94061063" target="_blank" rel="noopener">Switched LED 5W Light Bulbs Rechargeable | 3 Pack | Auto Dimmable | E27</a></li>
+        </ul></details>
+    </div>
+    <div class="opp-card">
+      <span class="badge low">0.0</span>
+      <a href="https://www.takealot.com/x/PLID93651583" target="_blank" rel="noopener">Magneto Rechargeable 7W 2000mAh LED Bulb (B22)</a>
+      <div class="opp-meta">R89 &middot; <b>2 listings</b> (same product) &middot; rating 4.8 &middot; In stock</div>
+      <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
+      <details class="variants"><summary>see 2 look-alike listings</summary>
+        <ul>
+        <li><a href="https://www.takealot.com/x/PLID93651583" target="_blank" rel="noopener">Magneto Rechargeable 7W 2000mAh LED Bulb (B22)</a></li>
+        <li><a href="https://www.takealot.com/x/PLID93651610" target="_blank" rel="noopener">Magneto Rechargeable 7W 2000mAh LED Bulb (E27)</a></li>
+        </ul></details>
+    </div>
+    <div class="opp-card">
+      <span class="badge low">0.0</span>
+      <a href="https://www.takealot.com/x/PLID41396390" target="_blank" rel="noopener">12W Rechargeable Emergency LED Light Bulb</a>
+      <div class="opp-meta">R78-79 &middot; <b>2 listings</b> (same product) &middot; rating 4.6 &middot; In stock</div>
+      <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
+      <details class="variants"><summary>see 2 look-alike listings</summary>
+        <ul>
+        <li><a href="https://www.takealot.com/x/PLID90290595" target="_blank" rel="noopener">Switched 30-LED Rechargeable Emergency Light 150 Lumen</a></li>
+        <li><a href="https://www.takealot.com/x/PLID41396390" target="_blank" rel="noopener">12W Rechargeable Emergency LED Light Bulb</a></li>
+        </ul></details>
+    </div>
+    <div class="opp-card">
+      <span class="badge low">0.0</span>
+      <a href="https://www.takealot.com/x/PLID102250355" target="_blank" rel="noopener">17600mAh Mini DC UPS Backup Battery for Router &amp; CCTV</a>
+      <div class="opp-meta">R599-899 &middot; <b>2 listings</b> (same product) &middot; rating 0.0 &middot; Out of stock</div>
+      <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
+      <details class="variants"><summary>see 2 look-alike listings</summary>
+        <ul>
+        <li><a href="https://www.takealot.com/x/PLID102250355" target="_blank" rel="noopener">17600mAh Mini DC UPS Backup Battery for Router &amp; CCTV</a></li>
+        <li><a href="https://www.takealot.com/x/PLID102145758" target="_blank" rel="noopener">Multifunction Portable Mini DC UPS Battery Backup For Router Camera Device</a></li>
+        </ul></details>
+    </div>
+    <div class="opp-card">
+      <span class="badge low">0.0</span>
+      <a href="https://www.takealot.com/x/PLID70674298" target="_blank" rel="noopener">Litemate Rechargeable &amp; Dimmable 7W LED A60 Screw-in Light Bulb</a>
+      <div class="opp-meta">R79 &middot; 1 listing &middot; rating 4.2 &middot; In stock</div>
+      <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
+    </div>
+    <div class="opp-card">
+      <span class="badge low">0.0</span>
+      <a href="https://www.takealot.com/x/PLID99237081" target="_blank" rel="noopener">E26 Rechargeable Light Bulb with Remote Timer, Battery Backup Bulb Sconces</a>
+      <div class="opp-meta">R344 &middot; 1 listing &middot; rating 0.0 &middot; Out of stock</div>
+      <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
+    </div>
+    <div class="opp-card">
+      <span class="badge low">0.0</span>
+      <a href="https://www.takealot.com/x/PLID73772698" target="_blank" rel="noopener">10400 mAh Mini UPS | Router / ONT / CCTV Backup Power Supply</a>
+      <div class="opp-meta">R439 &middot; 1 listing &middot; rating 4.3 &middot; Out of stock</div>
+      <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
+    </div>
+  </section>
+  <section class="cat" data-niche="led-ambient-lighting">
+  <h2>LED &amp; Ambient Lighting <span class="cat-count">13 product(s)</span></h2>
+<p class="note chart-empty">Trend lines appear once there are 2+ daily snapshots on different days — collecting now.</p>
+    <div class="opp-card">
+      <span class="badge low">0.0</span>
+      <a href="https://www.takealot.com/x/PLID99939472" target="_blank" rel="noopener">Rechargeable LED Table Lamp touch dimming</a>
+      <div class="opp-meta">R197-397 &middot; <b>7 listings</b> (same product) &middot; rating 4.7 &middot; In stock</div>
+      <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
+      <details class="variants"><summary>see 7 look-alike listings</summary>
+        <ul>
+        <li><a href="https://www.takealot.com/x/PLID90380498" target="_blank" rel="noopener">Modern Rechargeable LED Portable Cordless Table Lamp</a></li>
+        <li><a href="https://www.takealot.com/x/PLID95504868" target="_blank" rel="noopener">Rechargeable 3-color LED Metal Table Lamp Lasting Up to 12 hours</a></li>
+        <li><a href="https://www.takealot.com/x/PLID98054850" target="_blank" rel="noopener">Gold Modern Cordless LED Table Lamp - Rechargeable 2000mAh Portable Light</a></li>
+        <li><a href="https://www.takealot.com/x/PLID99387519" target="_blank" rel="noopener">Gold Skirt Cordless LED Table Lamp - Rechargeable 2000mAh Portable Light</a></li>
+        <li><a href="https://www.takealot.com/x/PLID99939472" target="_blank" rel="noopener">Rechargeable LED Table Lamp touch dimming</a></li>
+        <li><a href="https://www.takealot.com/x/PLID99809895" target="_blank" rel="noopener">Rechargeable LED Table Lamp Metal Desk Lamp With Touch - Black</a></li>
+        <li><a href="https://www.takealot.com/x/PLID95575966" target="_blank" rel="noopener">Dimmable Rechargeable Touch LED Table Lamp for Restaurants/Homes</a></li>
+        </ul></details>
+    </div>
+    <div class="opp-card">
+      <span class="badge low">0.0</span>
+      <a href="https://www.takealot.com/x/PLID73070902" target="_blank" rel="noopener">Sunset Table Lamp</a>
+      <div class="opp-meta">R153-258 &middot; <b>6 listings</b> (same product) &middot; rating 4.5 &middot; In stock</div>
+      <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
+      <details class="variants"><summary>see 6 look-alike listings</summary>
+        <ul>
+        <li><a href="https://www.takealot.com/x/PLID72402759" target="_blank" rel="noopener">TG Sunset Projector Light</a></li>
+        <li><a href="https://www.takealot.com/x/PLID90460296" target="_blank" rel="noopener">Hi Quality Projection Sunset Light</a></li>
+        <li><a href="https://www.takealot.com/x/PLID98046706" target="_blank" rel="noopener">Sunset Lamp Night Light, Sunset Projection Lamp with Remote</a></li>
+        <li><a href="https://www.takealot.com/x/PLID73070902" target="_blank" rel="noopener">Sunset Table Lamp</a></li>
+        <li><a href="https://www.takealot.com/x/PLID72990073" target="_blank" rel="noopener">Sunset Projection Lamp</a></li>
+        <li><a href="https://www.takealot.com/x/PLID100663837" target="_blank" rel="noopener">Hi Quality Projection Sunset Light</a></li>
+        </ul></details>
+    </div>
+    <div class="opp-card">
+      <span class="badge low">0.0</span>
+      <a href="https://www.takealot.com/x/PLID68093570" target="_blank" rel="noopener">2m LED TV  Strip Light - RGB</a>
+      <div class="opp-meta">R128-499 &middot; <b>6 listings</b> (same product) &middot; rating 4.2 &middot; In stock</div>
+      <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
+      <details class="variants"><summary>see 6 look-alike listings</summary>
+        <ul>
+        <li><a href="https://www.takealot.com/x/PLID54543956" target="_blank" rel="noopener">5m Colour Changing RGB LED Strip Light</a></li>
+        <li><a href="https://www.takealot.com/x/PLID101182077" target="_blank" rel="noopener">LED Strip Lights 5m - High Quality Flexible Cuttable Light Strip</a></li>
+        <li><a href="https://www.takealot.com/x/PLID96907485" target="_blank" rel="noopener">2 Strip Led Tape Light Led Strip Lights ETN 12v ( 30cm )</a></li>
+        <li><a href="https://www.takealot.com/x/PLID90867886" target="_blank" rel="noopener">LED Strip Lights 12V RGB 5M - LED Strip Light with Remote Control</a></li>
+        <li><a href="https://www.takealot.com/x/PLID72867473" target="_blank" rel="noopener">10m RGB LED Strip Light (Light Only)</a></li>
+        <li><a href="https://www.takealot.com/x/PLID68093570" target="_blank" rel="noopener">2m LED TV  Strip Light - RGB</a></li>
+        </ul></details>
+    </div>
+    <div class="opp-card">
+      <span class="badge low">0.0</span>
+      <a href="https://www.takealot.com/x/PLID71718475" target="_blank" rel="noopener">Andowl LED Lights for Bedroom - 5M Color Changing Strip Lights</a>
+      <div class="opp-meta">R125-194 &middot; <b>3 listings</b> (same product) &middot; rating 4.2 &middot; In stock</div>
+      <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
+      <details class="variants"><summary>see 3 look-alike listings</summary>
+        <ul>
+        <li><a href="https://www.takealot.com/x/PLID71718475" target="_blank" rel="noopener">Andowl LED Lights for Bedroom - 5M Color Changing Strip Lights</a></li>
+        <li><a href="https://www.takealot.com/x/PLID73744639" target="_blank" rel="noopener">Andowl LED Lights for Bedroom - 5M Color Changing Strip Lights</a></li>
+        <li><a href="https://www.takealot.com/x/PLID97594016" target="_blank" rel="noopener">LED Strip Lights 3 Pre-Cut, LED Light Strip Flexible Color Changing</a></li>
+        </ul></details>
+    </div>
+    <div class="opp-card">
+      <span class="badge low">0.0</span>
+      <a href="https://www.takealot.com/x/PLID101462224" target="_blank" rel="noopener">Touch-Sensitive Ambient Light Remote Control Rechargeable Night Light</a>
+      <div class="opp-meta">R288 &middot; 1 listing &middot; rating 0.0 &middot; Out of stock</div>
+      <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
+    </div>
+    <div class="opp-card">
+      <span class="badge low">0.0</span>
+      <a href="https://www.takealot.com/x/PLID97490989" target="_blank" rel="noopener">LED Lying Flat Duck Night Light, 3 Level Dimmable Nursery Nightlight</a>
+      <div class="opp-meta">R137 &middot; 1 listing &middot; rating 4.4 &middot; Out of stock</div>
+      <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
+    </div>
+    <div class="opp-card">
+      <span class="badge low">0.0</span>
+      <a href="https://www.takealot.com/x/PLID97002537" target="_blank" rel="noopener">Rechargeable LED Night Light: Creative Desk Lamp for Bedroom &amp; Decoration</a>
+      <div class="opp-meta">R199 &middot; 1 listing &middot; rating 0.0 &middot; Out of stock</div>
+      <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
+    </div>
+    <div class="opp-card">
+      <span class="badge low">0.0</span>
+      <a href="https://www.takealot.com/x/PLID98627885" target="_blank" rel="noopener">16 Colour RGB LED Sunset Projection Lamp with Remote</a>
+      <div class="opp-meta">R275 &middot; 1 listing &middot; rating 2.3 &middot; In stock</div>
+      <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
+    </div>
+    <div class="opp-card">
+      <span class="badge low">0.0</span>
+      <a href="https://www.takealot.com/x/PLID73145481" target="_blank" rel="noopener">Stretchable Atmosphere LED Sunset Lamp</a>
+      <div class="opp-meta">R185 &middot; 1 listing &middot; rating 3.1 &middot; In stock</div>
+      <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
+    </div>
+    <div class="opp-card">
+      <span class="badge low">0.0</span>
+      <a href="https://www.takealot.com/x/PLID100233506" target="_blank" rel="noopener">1PC astronaut LED sunset projection light, home atmosphere decoration light</a>
+      <div class="opp-meta">R158 &middot; 1 listing &middot; rating 4.5 &middot; In stock</div>
+      <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
+    </div>
+    <div class="opp-card">
+      <span class="badge low">0.0</span>
+      <a href="https://www.takealot.com/x/PLID99819602" target="_blank" rel="noopener">Ambient Lamp, Sunset Lamp, Night Light, Rotating Head, Black</a>
+      <div class="opp-meta">R500 &middot; 1 listing &middot; rating 0.0 &middot; Out of stock</div>
+      <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
+    </div>
+    <div class="opp-card">
+      <span class="badge low">0.0</span>
+      <a href="https://www.takealot.com/x/PLID95163148" target="_blank" rel="noopener">5M Cordless 2835 High Brightness LED Strip Light - MRUL</a>
+      <div class="opp-meta">R188 &middot; 1 listing &middot; rating 4.2 &middot; Out of stock</div>
+      <div class="opp-meta">est. 0 units/month (over 1d: stock -0, +0 reviews)</div>
+    </div>
+<p class="note">+ 1 more product(s) in this category (lower score).</p>
+  </section>
 
   <footer>
-    Opportunity score = est. monthly sales &divide; sellers on listing. Score &gt; 20 = strong candidate.<br>
+    Charts plot each product's <b>attractiveness</b> (opportunity score) over the tracking window.<br>
+    Opportunity score = est. monthly sales &divide; number of look-alike listings (competition).<br>
+    Look-alike listings (same product sold under different names) are grouped into one product,
+    so competition reflects rival listings, not the 1-2 sellers a single buybox shows. Score &gt; 20 = strong candidate.<br>
     Sales estimates are rough (review growth assumes ~1 review per 30 sales).
   </footer>
+  <script>
+    document.querySelectorAll('.chip').forEach(function (chip) {
+      chip.addEventListener('click', function () {
+        document.querySelectorAll('.chip').forEach(function (x) { x.classList.remove('active'); });
+        chip.classList.add('active');
+        var f = chip.dataset.filter;
+        document.querySelectorAll('section.cat').forEach(function (s) {
+          s.style.display = (f === 'all' || s.dataset.niche === f) ? '' : 'none';
+        });
+      });
+    });
+  </script>
 </body>
 </html>
